@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jordan Reyes — Software Engineer</title>
+<meta name="description" content="Portfolio of Jordan Reyes, software engineer. Projects, experience, and contact.">
+
+<!-- ============================================================
+  QUICK START — read this first
+  1. Open this file and replace every [BRACKETED] placeholder
+     with your real info (name, links, bio, projects, jobs).
+  2. Do the same in styles.css only if you want to change colors/fonts.
+  3. script.js needs no edits unless you want to tweak animations.
+  4. See README.md for how to put this online for free.
+============================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">[jordan_reyes]</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-menu" id="navMenu">
+      <a href="#about">~/about</a>
+      <a href="#skills">~/skills</a>
+      <a href="#projects">~/projects</a>
+      <a href="#experience">~/experience</a>
+      <a href="#contact">~/contact</a>
+      <a href="assets/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">~/whoami</p>
+      <h1 class="hero-title">
+        <span class="terminal-line">
+          <span class="prompt">$</span>
+          <span id="typedText" class="typed"></span><span class="cursor" aria-hidden="true">▍</span>
+        </span>
+      </h1>
+      <p class="hero-sub">
+        [Backend-leaning full-stack engineer] building [reliable, fast systems] —
+        currently [Software Engineer at Company Name]. I write about what I build below.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+      <div class="hero-meta">
+        <span>[City, Country]</span>
+        <span class="dot">·</span>
+        <span>Open to [opportunities / freelance]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="eyebrow">~/about</p>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm [Jordan], a software engineer focused on [distributed systems / web platforms / developer tools].
+            Over the last [X years] I've worked on [one concrete thing you're proud of — e.g. "a payments
+            pipeline processing 2M+ transactions a day" or "a design system used by 40 engineers"].
+          </p>
+          <p>
+            I care most about [what genuinely drives you — code that's easy to delete, systems that fail
+            loudly instead of silently, developer experience, performance]. Outside of work I [one honest,
+            specific detail — a hobby, an open-source project, a niche interest].
+          </p>
+        </div>
+        <div class="about-facts reveal">
+          <dl>
+            <div class="fact">
+              <dt>Base</dt><dd>[City, Country]</dd>
+            </div>
+            <div class="fact">
+              <dt>Focus</dt><dd>[Backend · Infra · Web]</dd>
+            </div>
+            <div class="fact">
+              <dt>Stack</dt><dd>[TypeScript · Go · PostgreSQL]</dd>
+            </div>
+            <div class="fact">
+              <dt>Now</dt><dd>[Company Name]</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <div class="section-inner">
+      <p class="eyebrow">~/skills</p>
+      <div class="skills-grid reveal">
+        <div class="skill-group">
+          <h3>languages</h3>
+          <p>[TypeScript, Python, Go, SQL]</p>
+        </div>
+        <div class="skill-group">
+          <h3>frameworks</h3>
+          <p>[React, Next.js, Node.js, FastAPI]</p>
+        </div>
+        <div class="skill-group">
+          <h3>infrastructure</h3>
+          <p>[Docker, AWS, PostgreSQL, Redis]</p>
+        </div>
+        <div class="skill-group">
+          <h3>practices</h3>
+          <p>[CI/CD, testing, system design, code review]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="eyebrow">~/projects</p>
+      <h2 class="section-title">Selected work</h2>
+
+      <article class="project reveal">
+        <div class="project-meta">
+          <span class="project-path">projects/01-project-name</span>
+          <span class="project-year">[2026]</span>
+        </div>
+        <h3 class="project-title">[Project Name]</h3>
+        <p class="project-desc">
+          [One or two sentences: what it does, who it's for, and the specific technical
+          problem you solved — e.g. "Cut p95 API latency from 800ms to 120ms by
+          redesigning the caching layer."]
+        </p>
+        <div class="project-tags">
+          <span>[React]</span><span>[Node.js]</span><span>[PostgreSQL]</span>
+        </div>
+        <div class="project-links">
+          <a href="[https://github.com/you/repo]" target="_blank" rel="noopener">Code ↗</a>
+          <a href="[https://your-live-demo.com]" target="_blank" rel="noopener">Live demo ↗</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-meta">
+          <span class="project-path">projects/02-project-name</span>
+          <span class="project-year">[2025]</span>
+        </div>
+        <h3 class="project-title">[Project Name]</h3>
+        <p class="project-desc">
+          [Same structure: what it is, the interesting technical decision, the measurable
+          outcome if you have one.]
+        </p>
+        <div class="project-tags">
+          <span>[Python]</span><span>[FastAPI]</span><span>[Docker]</span>
+        </div>
+        <div class="project-links">
+          <a href="[https://github.com/you/repo]" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </article>
+
+      <article class="project reveal">
+        <div class="project-meta">
+          <span class="project-path">projects/03-project-name</span>
+          <span class="project-year">[2025]</span>
+        </div>
+        <h3 class="project-title">[Project Name]</h3>
+        <p class="project-desc">
+          [Same structure. Three strong projects beat six thin ones — cut anything
+          you can't speak to in an interview for two minutes.]
+        </p>
+        <div class="project-tags">
+          <span>[Go]</span><span>[Redis]</span>
+        </div>
+        <div class="project-links">
+          <a href="[https://github.com/you/repo]" target="_blank" rel="noopener">Code ↗</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section section-alt">
+    <div class="section-inner">
+      <p class="eyebrow">~/experience</p>
+      <h2 class="section-title">Log</h2>
+
+      <div class="log-entry reveal">
+        <div class="log-when">[2024 — Present]</div>
+        <div class="log-what">
+          <h3>[Software Engineer] · [Company Name]</h3>
+          <p>[One line on scope/team, then 1-2 bullets on concrete impact — numbers if you have them.]</p>
+        </div>
+      </div>
+
+      <div class="log-entry reveal">
+        <div class="log-when">[2022 — 2024]</div>
+        <div class="log-what">
+          <h3>[Job Title] · [Company Name]</h3>
+          <p>[Same structure — what you owned, what changed because of you.]</p>
+        </div>
+      </div>
+
+      <div class="log-entry reveal">
+        <div class="log-when">[2020 — 2022]</div>
+        <div class="log-what">
+          <h3>[Degree / Job Title] · [Institution or Company]</h3>
+          <p>[Education or earlier role — keep it to one or two lines.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="section-inner">
+      <p class="eyebrow">~/contact</p>
+      <h2 class="section-title">Let's talk</h2>
+      <p class="contact-sub">
+        Open to [new roles / freelance work / interesting problems]. The fastest way to
+        reach me is email.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:[you@email.com]" class="btn btn-primary">[you@email.com]</a>
+      </div>
+      <div class="social-links">
+        <a href="[https://linkedin.com/in/you]" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="[https://github.com/you]" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="[https://twitter.com/you]" target="_blank" rel="noopener">Twitter/X ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>© <span id="year"></span> [Jordan Reyes]</span>
+    <span class="footer-note">Built with HTML, CSS &amp; JS · deployed on [Vercel]</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
