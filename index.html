@@ -1,249 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kavini Pathagamage — Software Engineer & Master's Student</title>
-<meta name="description" content="Portfolio of Kavini Pathagamage, Computer Engineering Master's student. Projects, experience, and contact.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kavini Pathagamage | Software Engineer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- DevIcons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="grain" aria-hidden="true"></div>
+    <!-- Vanta.js Background Container -->
+    <div id="vanta-bg"></div>
 
-<header class="nav">
-  <div class="nav-inner">
-    <a href="#top" class="nav-brand">kavini_pathagamage</a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="nav-menu" id="navMenu">
-      <a href="#about">~/about</a>
-      <a href="#skills">~/skills</a>
-      <a href="#projects">~/projects</a>
-      <a href="#experience">~/experience</a>
-      <a href="#contact">~/contact</a>
-      <a href="assets/resume.pdf" class="nav-cta" target="_blank" rel="noopener">Resume ↗</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">~/whoami</p>
-      <h1 class="hero-title">
-        <span class="terminal-line">
-          <span class="prompt">$</span>
-          <span id="typedText" class="typed">Kavini Pathagamage</span><span class="cursor" aria-hidden="true">▍</span>
-        </span>
-      </h1>
-      <p class="hero-sub">
-        Computer Engineering Master's student building cross-platform applications and cloud microservices —
-        currently studying at Politecnico di Milano. 
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View projects</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
-      </div>
-      <div class="hero-meta">
-        <span>Busto Arsizio, Italy</span>
-        <span class="dot">·</span>
-        <span>Open to new opportunities</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="section-inner">
-      <p class="eyebrow">~/about</p>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p>
-            I am a Master of Science student in Computer Science and Engineering at the School of Industrial and Information Engineering, Politecnico di Milano. I aim to develop innovative and practical solutions to address challenges in data & cloud security and technology sustainability.
-          </p>
-          <p>
-            My goal is to grow as a professional who not only advances in the industry but also contributes to creating a safer and more connected world.
-          </p>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Kavini.</a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Work</a>
+                <a href="assets/resume.pdf" target="_blank" class="btn-outline">Resume</a>
+            </nav>
         </div>
-        <div class="about-facts reveal">
-          <dl>
-            <div class="fact">
-              <dt>Base</dt><dd>Busto Arsizio, Italy</dd>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section-padding">
+            <div class="hero-content fade-up">
+                <p class="mono-subtitle">Hi, my name is</p>
+                <h1 class="hero-title">Kavini Kushani<br><span class="text-accent">Pathagamage.</span></h1>
+                <p class="hero-desc">
+                    I build secure cloud applications and scalable microservices. Currently a Computer Engineering MSc Student at Politecnico di Milano, focusing on Cybersecurity and Cloud Computing.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                    <a href="https://github.com/kavikushi0207" target="_blank" class="social-icon"><i class="devicon-github-original"></i></a>
+                    <a href="https://linkedin.com/in/kavini-kushani" target="_blank" class="social-icon"><i class="devicon-linkedin-plain"></i></a>
+                </div>
             </div>
-            <div class="fact">
-              <dt>Focus</dt><dd>Cloud Computing · Cyber Security · Software Engineering</dd>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding">
+            <h2 class="section-heading fade-up"><span class="mono-num">01.</span> Who I Am</h2>
+            
+            <div class="bento-grid">
+                <div class="bento-card span-2 fade-up">
+                    <h3>Software Engineer & Researcher</h3>
+                    <p>I am passionate about exploring new trends in computer engineering, particularly in cloud applications and telecommunication solutions blended with cybersecurity. My goal is to contribute to creating a safer, more connected world.</p>
+                </div>
+                
+                <div class="bento-card fade-up">
+                    <h3>Education</h3>
+                    <p class="mono-text text-accent">Politecnico di Milano</p>
+                    <p>MSc Computer Science & Engineering</p>
+                    <hr class="divider">
+                    <p class="mono-text text-accent">University of Ruhuna</p>
+                    <p>BSc Engineering (Honours)</p>
+                </div>
+
+                <div class="bento-card fade-up">
+                    <h3>Athlete & Leader</h3>
+                    <p>Former University Captain of Powerlifting. I bring the same discipline, teamwork, and drive for continuous improvement from the platform to my engineering work.</p>
+                </div>
+
+                <div class="bento-card span-2 fade-up">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-icons">
+                        <i class="devicon-java-plain" title="Java"></i>
+                        <i class="devicon-python-plain" title="Python"></i>
+                        <i class="devicon-javascript-plain" title="JavaScript"></i>
+                        <i class="devicon-react-original" title="React"></i>
+                        <i class="devicon-nodejs-plain" title="Node.js"></i>
+                        <i class="devicon-mongodb-plain" title="MongoDB"></i>
+                        <i class="devicon-mysql-plain" title="MySQL"></i>
+                        <i class="devicon-flutter-plain" title="Flutter"></i>
+                    </div>
+                </div>
             </div>
-            <div class="fact">
-              <dt>Education</dt><dd>Politecnico di Milano & University of Ruhuna</dd>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="section-padding">
+            <h2 class="section-heading fade-up"><span class="mono-num">02.</span> Where I've Worked</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item fade-up">
+                    <div class="timeline-date mono-text">Nov 2023 — Jan 2025</div>
+                    <div class="timeline-content bento-card">
+                        <h3>Software Engineer Intern <span class="text-accent">@ Chimitex S.p.A</span></h3>
+                        <p>Built an Android app for submitting vehicle defect tickets and tracking updates, alongside a Web Application designed for ticket management and scheduling maintenance appointments.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up">
+                    <div class="timeline-date mono-text">Dec 2022 — Oct 2023</div>
+                    <div class="timeline-content bento-card">
+                        <h3>Research Assistant <span class="text-accent">@ NetsLab, Ireland</span></h3>
+                        <p>Developed a peer-to-peer federated learning platform for Industrial IoT focusing on privacy preservation. Implemented differential privacy and encryption protocols.</p>
+                    </div>
+                </div>
             </div>
-            <div class="fact">
-              <dt>Languages</dt><dd>Sinhala (C2), English (B2), Italian (B1)</dd>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-padding">
+            <h2 class="section-heading fade-up"><span class="mono-num">03.</span> Featured Projects</h2>
+            
+            <div class="project-grid">
+                <div class="project-card bento-card fade-up">
+                    <div class="project-top">
+                        <i class="devicon-github-original text-accent" style="font-size: 2rem;"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/kavikushi0207/FaaSTestProject" target="_blank">Code ↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">FaaS Performance Analysis</h3>
+                    <p class="project-desc">Executed a comprehensive Function-as-a-Service (FaaS) performance analysis project. Involved deep cloud benchmarking and managing containerized microservices.</p>
+                    <div class="project-tech mono-text">Cloud Benchmarking · FaaS · Microservices</div>
+                </div>
+
+                <div class="project-card bento-card fade-up">
+                    <div class="project-top">
+                        <i class="devicon-flutter-plain text-accent" style="font-size: 2rem;"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/KasraAlizadeh/MobileApp" target="_blank">Code ↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Cross-Platform Mobile App</h3>
+                    <p class="project-desc">Engineered a mobile application using Flutter. Designed core code architecture, managed complex local storage integrations, and configured cross-platform deployment files.</p>
+                    <div class="project-tech mono-text">Flutter · Dart · Mobile Architecture</div>
+                </div>
+
+                <div class="project-card bento-card fade-up">
+                    <div class="project-top">
+                        <i class="devicon-react-original text-accent" style="font-size: 2rem;"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/samitha093/FYP_project" target="_blank">View ↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">P2P Federated Learning System</h3>
+                    <p class="project-desc">Collaborative Federated Learning Platform for Privacy-preserved Decentralized Machine Learning in Industrial Internet of Things (IIoT).</p>
+                    <div class="project-tech mono-text">Java · Python · Cryptography</div>
+                </div>
             </div>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section section-alt">
-    <div class="section-inner">
-      <p class="eyebrow">~/skills</p>
-      <div class="skills-grid reveal">
-        <div class="skill-group">
-          <h3>Languages</h3>
-          <p>Java, JavaScript, Python, HTML</p>
-        </div>
-        <div class="skill-group">
-          <h3>Frameworks</h3>
-          <p>Node.js, React, Angular</p>
-        </div>
-        <div class="skill-group">
-          <h3>Databases & Systems</h3>
-          <p>Firebase, MySQL, MongoDB, Windows, MacOS, Linux</p>
-        </div>
-        <div class="skill-group">
-          <h3>Soft Skills</h3>
-          <p>Leadership, Teamwork, Time Management, Problem-Solving</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </main>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="section-inner">
-      <p class="eyebrow">~/projects</p>
-      <h2 class="section-title">Selected work</h2>
+    <footer class="footer">
+        <p class="mono-text">All rights reserved © 2026 Kavini Kushani Pathagamage</p>
+    </footer>
 
-      <article class="project reveal">
-        <div class="project-meta">
-          <span class="project-path">projects/01-faas-analysis</span>
-          <span class="project-year">2026</span>
-        </div>
-        <h3 class="project-title">FaaS Performance Analysis</h3>
-        <p class="project-desc">
-          Executed a comprehensive Function-as-a-Service (FaaS) performance analysis and evaluation project. Involved deep cloud benchmarking and managing containerized microservices over a multi-month period. Co-authored with Taniya Afreen.
-        </p>
-        <div class="project-tags">
-          <span>Cloud Benchmarking</span><span>FaaS</span><span>Microservices</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/kavikushi0207/FaaSTestProject" target="_blank" rel="noopener">Code ↗</a>
-        </div>
-      </article>
-
-      <article class="project reveal">
-        <div class="project-meta">
-          <span class="project-path">projects/02-flutter-mobile</span>
-          <span class="project-year">2026</span>
-        </div>
-        <h3 class="project-title">Cross-Platform Mobile App</h3>
-        <p class="project-desc">
-          Engineered a mobile application using the Flutter framework. Designed the core code architecture, managed complex local storage integrations, and configured project deployment files for seamless cross-platform functionality.
-        </p>
-        <div class="project-tags">
-          <span>Flutter</span><span>Dart</span><span>Mobile Architecture</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/KasraAlizadeh/MobileApp" target="_blank" rel="noopener">Code ↗</a>
-        </div>
-      </article>
-
-      <article class="project reveal">
-        <div class="project-meta">
-          <span class="project-path">projects/03-p2p-federated-learning-system</span>
-          <span class="project-year">2026</span>
-        </div>
-        <h3 class="project-title">Privacy preserved Peer to Peer Federated Learning system</h3>
-        <p class="project-desc">
-        Collaborative Federated Learning Platform for Privacy-preserved Decentralized Machine Learning in Industrial Internet of Things
-        </p>
-        <div class="project-tags">
-          <span>EdTech</span><span>Content Design</span><span>Italian</span>
-        </div>
-        <div class="project-links">
-          <a href="https://github.com/samitha093/FYP_project" target="_blank" rel="noopener">Live Content ↗</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-<section id="experience" class="section section-alt">
-    <div class="section-inner">
-      <p class="eyebrow">~/experience</p>
-      <h2 class="section-title">Log</h2>
-
-      <div class="log-entry reveal">
-        <div class="log-when">Nov 2023 - Jan 2025</div>
-        <div class="log-what">
-          <h3>Software Engineer Intern · Chimitex S.p.A, Italy</h3>
-          <p>Built an Android app for submitting vehicle defect tickets and tracking updates, alongside a Web Application designed for ticket management and scheduling maintenance appointments.</p>
-        </div>
-      </div>
-
-      <div class="log-entry reveal">
-        <div class="log-when">Dec 2022 - Oct 2023</div>
-        <div class="log-what">
-          <h3>Research Assistant · Network Softwarization and Security Labs (NetsLab), Ireland</h3>
-          <p>Developed a peer-to-peer federated learning platform for Industrial IoT focusing on privacy preservation. Researched and implemented privacy-enhancing techniques including differential privacy and encryption protocols.</p>
-        </div>
-      </div>
-
-      <div class="log-entry reveal">
-        <div class="log-when">Jan 2019 - Feb 2024</div>
-        <div class="log-what">
-          <h3>Bachelor of the Science of Engineering (Honours) · University of Ruhuna, Sri Lanka</h3>
-          <p>Specialized in Electrical and Information Engineering, achieving a GPA of 3.29/4.0. Also acted as a Student Instructor, contributing to teaching assistance through theoretical and practical examples for undergraduates.</p>
-        </div>
-      </div>
-      
-      <div class="log-entry reveal">
-        <div class="log-when">Mar 2022 - June 2022</div>
-        <div class="log-what">
-          <h3>Software Engineer Intern · Adroit Logic Lanka (Pvt) Ltd, Sri Lanka</h3>
-          <p>Implemented a customized issue-tracking system for customer support and efficiently redirected tickets to the responsible teams.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <div class="section-inner">
-      <p class="eyebrow">~/contact</p>
-      <h2 class="section-title">Let's talk</h2>
-      <p class="contact-sub">
-        I am a driven professional looking to contribute to creating a safer and more connected world. The fastest way to reach me is email.
-      </p>
-      <div class="contact-links">
-        <a href="mailto:kavikushi0207@gmail.com" class="btn btn-primary">kavikushi0207@gmail.com</a>
-      </div>
-      <div class="social-links">
-        <a href="https://github.com/kavikushi0207" target="_blank" rel="noopener">GitHub </a>
-        <a href="https://linkedin.com/in/kavini-kushani" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.researchgate.net/profile/Kavini-Kushani" target="_blank" rel="noopener">ResearchGate</a>
-        <a href="https://medium.com/@kavikushi0207" target="_blank" rel="noopener">Medium</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="footer-inner">
-    <span>© <span id="year"></span> Kavini Pathagamage</span>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>    
+    <!-- GSAP for smooth scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

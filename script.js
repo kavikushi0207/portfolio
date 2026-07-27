@@ -1,48 +1,44 @@
-// Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // 1. Initialize Vanta.js Dots Background
+    VANTA.NET({
+        el: "#vanta-bg",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x3b82f6,           // Modern Blue for the network lines
+        backgroundColor: 0x050505, // Deep dark background
+        points: 12.00,             // Lower number = cleaner, less cluttered look
+        maxDistance: 20.00,        // How far lines reach to connect
+        spacing: 18.00             // Spreads the nodes out beautifully
+    });
 
-// Mobile nav toggle
-const navToggle = document.getElementById('navToggle');
-const navMenu = document.getElementById('navMenu');
-navToggle.addEventListener('click', () => {
-  const isOpen = navMenu.classList.toggle('is-open');
-  navToggle.setAttribute('aria-expanded', isOpen);
+    // 2. GSAP Scroll Animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    const fadeElements = gsap.utils.toArray('.fade-up');
+    
+    fadeElements.forEach((element) => {
+        gsap.fromTo(element, 
+            { 
+                y: 50, 
+                opacity: 0 
+            },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 85%", 
+                    toggleActions: "play none none reverse" 
+                }
+            }
+        );
+    });
 });
-navMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('is-open');
-    navToggle.setAttribute('aria-expanded', false);
-  });
-});
-
-// Hero typing effect — respects reduced-motion preference
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const typedEl = document.getElementById('typedText');
-const fullText = "whoami — [Kavini Pathagamage], Software Engineer";
-
-if (prefersReducedMotion) {
-  typedEl.textContent = fullText;
-} else {
-  let i = 0;
-  const type = () => {
-    if (i <= fullText.length) {
-      typedEl.textContent = fullText.slice(0, i);
-      i++;
-      setTimeout(type, 34);
-    }
-  };
-  type();
-}
-
-// Scroll-reveal for sections
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.15 });
-
-revealEls.forEach(el => observer.observe(el));
