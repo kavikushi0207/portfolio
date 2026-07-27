@@ -18,7 +18,7 @@ navMenu.querySelectorAll('a').forEach(link => {
 // Hero typing effect — respects reduced-motion preference
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const typedEl = document.getElementById('typedText');
-const fullText = "whoami — [Jordan Reyes], Software Engineer";
+const fullText = "whoami — [Kavini Pathagamage], Software Engineer";
 
 if (prefersReducedMotion) {
   typedEl.textContent = fullText;
