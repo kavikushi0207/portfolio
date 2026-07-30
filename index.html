@@ -24,11 +24,14 @@
     <!-- Navigation -->
     <header class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Kavini.</a>
+            <a href="#" class="logo">~/Kavini </a>
             <nav class="nav-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
-                <a href="#projects">Work</a>
+                <a href="#projects">Projects</a>
+                <a href="#education">Education</a>
+                <a href="#publications">Publications</a>
+                <a href="#contact">Contact</a>
                 <a href="assets/resume.pdf" target="_blank" class="btn-outline">Resume</a>
             </nav>
         </div>
@@ -40,7 +43,7 @@
         <section class="hero section-padding">
             <div class="hero-content fade-up">
                 <p class="mono-subtitle">Hi, my name is</p>
-                <h1 class="hero-title">Kavini Kushani<br><span class="text-accent">Pathagamage.</span></h1>
+                <h1 class="hero-title">Kavini<br><span class="text-accent">Pathagamage.</span></h1>
                 <p class="hero-desc">
                     I build secure cloud applications and scalable microservices. Currently a Computer Engineering MSc Student at Politecnico di Milano, focusing on Cybersecurity and Cloud Computing.
                 </p>
@@ -57,18 +60,23 @@
             <h2 class="section-heading fade-up"><span class="mono-num">01.</span> Who I Am</h2>
             
             <div class="bento-grid">
-                <div class="bento-card span-2 fade-up">
-                    <h3>Software Engineer & Researcher</h3>
-                    <p>I am passionate about exploring new trends in computer engineering, particularly in cloud applications and telecommunication solutions blended with cybersecurity. My goal is to contribute to creating a safer, more connected world.</p>
+                <div class="bento-card span-2 fade-up bio-card">
+                  <div class="bio-content">
+                      <h3>Software Engineer & Researcher</h3>
+                      <p>“ I am passionate about exploring new trends in computer engineering, particularly in cloud applications and telecommunication solutions blended with cybersecurity. My goal is to contribute to creating a safer, more connected world. ”</p>
+                  </div>
+                <div class="bio-image">
+                   <img src="assets/profile.jpeg" alt="Kavini Pathagamage">
+                </div>
                 </div>
                 
                 <div class="bento-card fade-up">
                     <h3>Education</h3>
-                    <p class="mono-text text-accent">Politecnico di Milano</p>
+                    <a href="https://www.polimi.it/" target="_blank" class="mono-text text-accent">Politecnico di Milano</a>
                     <p>MSc Computer Science & Engineering</p>
                     <hr class="divider">
-                    <p class="mono-text text-accent">University of Ruhuna</p>
-                    <p>BSc Engineering (Honours)</p>
+                    <a href="https://www.eng.ruh.ac.lk/" target="_blank" class="mono-text text-accent">University of Ruhuna</a>
+                    <p>BSc Eng.(Honours)in Electrical & Information Engineering</p>
                 </div>
 
                 <div class="bento-card fade-up">
@@ -77,18 +85,46 @@
                 </div>
 
                 <div class="bento-card span-2 fade-up">
-                    <h3>Tech Stack</h3>
-                    <div class="tech-icons">
-                        <i class="devicon-java-plain" title="Java"></i>
-                        <i class="devicon-python-plain" title="Python"></i>
-                        <i class="devicon-javascript-plain" title="JavaScript"></i>
-                        <i class="devicon-react-original" title="React"></i>
-                        <i class="devicon-nodejs-plain" title="Node.js"></i>
-                        <i class="devicon-mongodb-plain" title="MongoDB"></i>
-                        <i class="devicon-mysql-plain" title="MySQL"></i>
-                        <i class="devicon-flutter-plain" title="Flutter"></i>
-                    </div>
-                </div>
+    <h3>Technologies & Tools</h3>
+    
+    <div class="tech-marquee-wrapper">
+        <div class="tech-marquee-track">
+            
+            <!-- First set of icons -->
+            <div class="tech-icons-group">
+                <i class="devicon-java-plain" title="Java"></i>
+                <i class="devicon-python-plain" title="Python"></i>
+                <i class="devicon-javascript-plain" title="JavaScript"></i>
+                <i class="devicon-react-original" title="React"></i>
+                <i class="devicon-nodejs-plain" title="Node.js"></i>
+                <i class="devicon-mongodb-plain" title="MongoDB"></i>
+                <i class="devicon-mysql-plain" title="MySQL"></i>
+                <i class="devicon-flutter-plain" title="Flutter"></i>
+                <i class="devicon-android-plain" title="Android"></i>
+                <i class="devicon-docker-plain" title="Docker"></i>
+                <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
+                <i class="devicon-azure-plain" title="Azure"></i>
+            </div>
+            
+            <!-- Duplicate set for seamless looping -->
+            <div class="tech-icons-group">
+                <i class="devicon-java-plain" title="Java"></i>
+                <i class="devicon-python-plain" title="Python"></i>
+                <i class="devicon-javascript-plain" title="JavaScript"></i>
+                <i class="devicon-react-original" title="React"></i>
+                <i class="devicon-nodejs-plain" title="Node.js"></i>
+                <i class="devicon-mongodb-plain" title="MongoDB"></i>
+                <i class="devicon-mysql-plain" title="MySQL"></i>
+                <i class="devicon-flutter-plain" title="Flutter"></i>
+                <i class="devicon-android-plain" title="Android"></i>
+                <i class="devicon-docker-plain" title="Docker"></i>
+                <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
+                <i class="devicon-azure-plain" title="Azure"></i>
+            </div>
+            
+        </div>
+    </div>
+</div>
             </div>
         </section>
 
@@ -144,6 +180,17 @@
                     <div class="project-tech mono-text">Flutter · Dart · Mobile Architecture</div>
                 </div>
 
+                <div class="project-card bento-card fade-up">
+                    <div class="project-top">
+                        <i class="devicon-react-original text-accent" style="font-size: 2rem;"></i>
+                        <div class="project-links">
+                            <a href="https://github.com/samitha093/FYP_project" target="_blank">View ↗</a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">P2P Federated Learning System</h3>
+                    <p class="project-desc">Collaborative Federated Learning Platform for Privacy-preserved Decentralized Machine Learning in Industrial Internet of Things (IIoT).</p>
+                    <div class="project-tech mono-text">Java · Python · Cryptography</div>
+                </div>
                 <div class="project-card bento-card fade-up">
                     <div class="project-top">
                         <i class="devicon-react-original text-accent" style="font-size: 2rem;"></i>

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x3b82f6,           // Modern Blue for the network lines
+        color: 0xd1d5db,           // Modern Blue for the network lines
         backgroundColor: 0x050505, // Deep dark background
         points: 12.00,             // Lower number = cleaner, less cluttered look
         maxDistance: 20.00,        // How far lines reach to connect
