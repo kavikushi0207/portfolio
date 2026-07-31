@@ -1,66 +1,67 @@
-# Portfolio starter
+# 🚀 Personal Portfolio & Web Resume
 
-A single-page developer portfolio — plain HTML/CSS/JS, no build step, no dependencies.
-Deploys for free in under 5 minutes.
+A modern, highly interactive personal portfolio built to showcase my software engineering projects, research publications, and professional background. Designed with a sleek, dark-themed "Bento Box" UI and optimized for cross-device responsiveness.
 
-## 1. Preview it locally
+🔗 **[View Live Portfolio Here](https://kavini-pathagamage.vercel.app/)**
 
-Just double-click `index.html`, or for a proper local server:
+---
 
-```bash
-# Python (already on most machines)
-python3 -m http.server 8000
-# then open http://localhost:8000
-```
+## ✨ Key Features
 
-## 2. Replace the placeholder content
+*   **Bento Box Grid System:** A clean, modular layout utilizing CSS Grid for a highly organized and modern aesthetic.
+*   **Interactive UI/UX:** Features glassmorphism effects, hover-triggered animations, and a dynamic scrolling tech-stack marquee.
+*   **Responsive Design:** Fully optimized for mobile, tablet, and desktop viewing.
+*   **Touch-Friendly Carousels:** Integrated `Swiper.js` for smooth, drag-and-swipe project and extracurricular galleries.
+*   **Modern Contact Hub:** Built-in "copy-to-clipboard" email functionality and interactive social links using pure SVGs.
+*   **Dynamic Background:** Features an animated background for a premium visual experience.
 
-Everything you need to change is wrapped in `[brackets]` inside `index.html`. Work top to bottom:
+---
 
-- **Nav brand** — your name/handle
-- **Hero** — name, role, one-line pitch, location
-- **About** — 2 short paragraphs + the fact list (base, focus, stack, current role)
-- **Skills** — your real languages/frameworks/infra/practices
-- **Projects** — 3 strong projects. For each: what it does, the specific technical
-  decision or problem you solved, a measurable outcome if you have one, and links to
-  code/live demo. Three projects you can talk about for 2 minutes in an interview beat
-  six thin ones.
-- **Experience** — reverse-chronological log of roles (or role + education)
-- **Contact** — email, LinkedIn, GitHub
+## 🛠️ Technology Stack
 
-Add your resume PDF at `assets/resume.pdf` (the nav button links there already).
+*   **Frontend:** HTML5, CSS3, Vanilla JavaScript
+*   **Design System:** Custom CSS Variables, Flexbox, CSS Grid
+*   **Libraries & Assets:** 
+    *   [Swiper.js](https://swiperjs.com/) (Touch sliders)
+    *   [Devicon](https://devicon.dev/) (Technology stack icons)
+    *   [Vanta.js](https://www.vantajs.com/) (Animated background)
 
-Colors and fonts live at the top of `styles.css` under `:root` if you want to adjust
-the palette — everything references those variables.
+---
 
-## 3. Put it online for free
+## 📂 Project Structure
 
-**Easiest: Vercel (recommended)**
-1. Push this folder to a new GitHub repo (public or private, doesn't matter).
-2. Go to vercel.com → sign in with GitHub → "Add New Project" → import the repo.
-3. Framework preset: "Other" (it's static, no build command needed). Deploy.
-4. You'll get a live URL like `your-name.vercel.app` — that's the link for your CV/LinkedIn.
+\`\`\`text
+├── assets/                 # Images, PPTX proposals, and PDF documents
+├── index.html              # Main HTML structure
+├── styles.css              # Custom styling, animations, and responsive breakpoints
+├── script.js               # Interactivity, clipboard copy, and Swiper init
+└── README.md               # Project documentation
+\`\`\`
 
-**Alternative: GitHub Pages**
-1. Push the folder to a GitHub repo.
-2. Repo → Settings → Pages → Source: deploy from branch `main`, folder `/root`.
-3. Live at `your-username.github.io/repo-name` in a minute or two.
+---
 
-**Alternative: Netlify**
-1. Go to app.netlify.com → drag and drop this folder directly onto the dashboard. Done —
-   no GitHub required, though connecting a repo gets you auto-redeploys on push.
+## 💻 Local Setup
 
-## 4. Optional: a real custom domain
+To run this project locally, no complex build tools are required. 
 
-The free subdomains above (`.vercel.app`, `.github.io`, `.netlify.app`) look perfectly
-professional on a CV. If you want `yourname.com` instead, buy the domain from Namecheap
-or Cloudflare (~$8–12/year) and point it at whichever host you used — each has a
-one-page "add custom domain" guide once your site is live.
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/kavikushi0207/portfolio.git
+   \`\`\`
+2. Navigate into the directory:
+   \`\`\`bash
+   cd portfolio
+   \`\`\`
+3. Open `index.html` in your preferred web browser, or use an extension like VS Code's **Live Server** for hot-reloading.
 
-## 5. Before you share the link
+---
 
-- [ ] Every `[bracket]` placeholder replaced
-- [ ] All project/GitHub/LinkedIn links actually work (open each one)
-- [ ] Resume PDF uploaded and the nav link opens it
-- [ ] Checked on your phone — the mobile nav toggle works
-- [ ] Ran it through a spell-checker once, top to bottom
+## 📬 Let's Connect
+
+*   **LinkedIn:** [Kavini Pathagamage](https://linkedin.com/in/kavini-kushani)
+*   **GitHub:** [@kavikushi0207](https://github.com/kavikushi0207)
+*   **Medium:** [@kavikushi0207](https://medium.com/@kavikushi0207)
+*   **ResearchGate:** [Kavini Kushani](https://www.researchgate.net/profile/Kavini-Kushani)
+
+---
+*Designed and developed by Kavini Pathagamage.*
