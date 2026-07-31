@@ -267,7 +267,357 @@ body {
 .project-title { font-size: 1.4rem; margin-bottom: 1rem; }
 .project-desc { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem; }
 .project-tech { color: var(--text-secondary); font-size: 0.8rem; }
+/* === PUBLICATIONS CARDS === */
+.pub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
 
+.pub-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: var(--text-primary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+}
+
+/* The Folded Corner Effect */
+.pub-card::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-width: 0 45px 45px 0;
+    border-style: solid;
+    /* Uses the border color to make it look folded inward */
+    border-color: rgba(255, 255, 255, 0.05) var(--bg-dark);
+    border-bottom-left-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
+}
+
+.pub-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+/* Lights up the folded corner when you hover */
+.pub-card:hover::before {
+    border-color: var(--accent) var(--bg-dark);
+}
+
+.pub-meta {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.pub-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.pub-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.pub-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.view-link {
+    font-family: var(--font-mono);
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 768px) {
+    .pub-card {
+        padding: 1.5rem;
+    }
+    .pub-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+/* === PROJECT STATUS BADGES === */
+.project-badges {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.badge {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+/* Public - subtle blue matching your accent */
+.badge-public {
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+/* Private - subtle gray */
+.badge-private {
+    color: #ce8c98;
+    border: 1px solid rgba(156, 163, 175, 0.3);
+    background: rgba(156, 163, 175, 0.05);
+}
+
+/* Completed - subtle emerald green */
+.badge-completed {
+    color: #10b981;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.05);
+}
+
+/* Ongoing - subtle amber/orange with an animated pulsing dot */
+.badge-ongoing {
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    background: rgba(245, 158, 11, 0.05);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.badge-ongoing::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #f59e0b;
+    border-radius: 50%;
+    animation: pulseDot 2s infinite;
+}
+
+/* The pulse animation for the Ongoing dot */
+@keyframes pulseDot {
+    0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.6); }
+    70% { box-shadow: 0 0 0 4px rgba(245, 158, 11, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0); }
+}
+/* === LEADERSHIP & EXTRACURRICULAR CARDS === */
+.extra-swiper {
+    width: 100%;
+    padding-bottom: 3rem !important; /* Space for the pagination dots */
+    overflow: hidden;
+}
+
+/* Make slides size dynamically based on screen */
+.extra-swiper .swiper-slide {
+    width: 350px; 
+    height: auto;
+}
+
+.extra-card {
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    cursor: grab;
+}
+
+.extra-card:active {
+    cursor: grabbing;
+}
+
+.extra-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border);
+    background-color: rgba(0, 0, 0, 0.4); /* Fills empty space if photo isn't a perfect rectangle */
+}
+
+.extra-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Prevents cropping! */
+    transition: transform 0.5s ease;
+}
+
+.extra-card:hover .extra-img img {
+    transform: scale(1.05);
+}
+
+
+
+.extra-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.extra-content p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Style the Swiper dots to match your teal accent */
+.swiper-pagination-bullet {
+    background: var(--text-secondary) !important;
+    opacity: 0.5 !important;
+}
+.swiper-pagination-bullet-active {
+    background: var(--accent) !important;
+    opacity: 1 !important;
+    box-shadow: 0 0 10px rgba(44, 145, 145, 0.4);
+}
+/* === CONTACT SECTION === */
+.contact-bento {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem;
+}
+
+.contact-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.contact-text p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    max-width: 500px;
+}
+
+/* Email Buttons Setup */
+.email-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+/* Slides the arrow to the right when hovered */
+.contact-btn svg {
+    transition: transform 0.3s ease;
+}
+.contact-btn:hover svg {
+    transform: translateX(5px);
+}
+
+/* Copy Button Styling */
+.copy-email-btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.copy-email-btn:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(59, 130, 246, 0.1); /* Assuming you are using the blue accent */
+    transform: translateY(-2px);
+}
+
+/* Social Boxes */
+.contact-socials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.social-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+
+.social-box span {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Pop-up effect on hover for social cards */
+.social-box i,
+.social-box svg {
+    font-size: 3rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    transition: transform 0.3s ease, color 0.3s ease, fill 0.3s ease;
+    fill: currentColor;
+}
+
+/* Color change and scale on hover */
+.social-box:hover i {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.social-box:hover svg {
+    fill: var(--accent);
+    transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .contact-bento {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 2rem;
+    }
+}
 /* === FOOTER === */
 .footer {
     text-align: center;
@@ -302,16 +652,15 @@ body {
     animation: scrollTechRightToLeft 25s linear infinite; 
 }
 
-/* Pauses the animation when the user hovers over it with their mouse! */
 .tech-marquee-track:hover {
     animation-play-state: paused;
 }
 
 .tech-icons-group {
     display: flex;
-    gap: 3rem;           /* Space between icons */
-    padding-right: 3rem; /* Must match the gap so the loop doesn't jump */
-    font-size: 3rem;     /* Size of the icons */
+    gap: 3rem;          
+    padding-right: 3rem; 
+    font-size: 3rem;     
     color: var(--text-secondary);
 }
 
@@ -321,16 +670,15 @@ body {
 }
 
 .tech-icons-group i:hover {
-    color: #2c9191; /* Neon green hover color to match your Vanta network */
-    transform: translateY(-5px) scale(1.1); /* Jumps up slightly on hover */
+    color: #2c9191; 
+    transform: translateY(-5px) scale(1.1);
 }
 
-/* The actual animation moving the track */
 @keyframes scrollTechRightToLeft {
     0% {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%); /* Moves exactly halfway (one full set of icons) */
+        transform: translateX(-50%); 
     }
 }

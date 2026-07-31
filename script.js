@@ -41,4 +41,61 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );
     });
+    // 3. Copy to Clipboard Functionality
+    
 });
+function copyEmail() {
+        const email = "kavikushi0207@gmail.com";
+        
+        // Copies the email to the user's clipboard
+        navigator.clipboard.writeText(email).then(() => {
+            
+            const copyText = document.getElementById("copyText");
+            const copyIcon = document.getElementById("copyIcon");
+            const copyBtn = document.getElementById("copyBtn");
+
+            // Change text and style to show success
+            copyText.innerText = "Copied!";
+            copyBtn.style.color = "#10b981"; // Emerald green success color
+            copyBtn.style.borderColor = "#10b981";
+            
+            // Change icon to a checkmark
+            copyIcon.innerHTML = '<polyline points="20 6 9 17 4 12"></polyline>';
+
+            // Reset the button back to normal after 3 seconds
+            setTimeout(() => {
+                copyText.innerText = "Copy";
+                copyBtn.style.color = ""; // Resets to CSS default
+                copyBtn.style.borderColor = "";
+                // Reset icon to the copy squares
+                copyIcon.innerHTML = '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>';
+            }, 3000);
+            
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    }
+// 4. Initialize Swiper Carousel for Extracurriculars
+    const swiper = new Swiper('.extra-swiper', {
+        effect: 'coverflow',       // Gives it a premium 3D slide effect
+        grabCursor: true,
+        centeredSlides: false,
+        slidesPerView: 'auto',     // Automatically sizes based on the CSS width
+        spaceBetween: 30,          // Space between cards
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 0,
+            modifier: 1,
+            slideShadows: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            // Adjusts spacing for mobile
+            320: { spaceBetween: 20 },
+            768: { spaceBetween: 30 }
+        }
+    });    
