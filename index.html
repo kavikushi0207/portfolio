@@ -57,76 +57,122 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="section-padding">
+       <section id="about" class="section-padding">
             <h2 class="section-heading fade-up"><span class="mono-num">01.</span> Who I Am</h2>
             
             <div class="bento-grid">
-                <div class="bento-card span-2 fade-up bio-card">
-                  <div class="bio-image">
-                   <img src="assets/profile.jpeg" alt="Kavini Pathagamage">
-                </div>
-                  <div class="bio-content">
-                      <h3>Software Engineer & Researcher</h3>
-                      <p>“ I am passionate about exploring new trends in computer engineering, particularly in cloud applications and telecommunication solutions blended with cybersecurity. My goal is to contribute to creating a safer, more connected world. ”</p>
-                  </div>
                 
+                <!-- ROW 1 -->
+                <div class="bento-card span-2 fade-up bio-card">
+                    <div class="bio-image">
+                        <img src="assets/profile.jpeg" alt="Kavini Pathagamage">
+                    </div>
+                    <div class="bio-content">
+                        <h3>Software Engineer & Researcher</h3>
+                        <p>“ I am passionate about exploring new trends in computer engineering, particularly in cloud applications and telecommunication solutions blended with cybersecurity. My goal is to contribute to creating a safer, more connected world. ”</p>
+                    </div>
                 </div>
                 
                 <div class="bento-card fade-up">
                     <h3>Education</h3>
-                    <a href="https://www.polimi.it/" target="_blank" class="mono-text text-accent">Politecnico di Milano</a>
+                    <!-- Added display: block so the links stack neatly above the text -->
+                    <a href="https://www.polimi.it/" target="_blank" class="mono-text text-accent" style="display: block; margin-top: 1rem; text-decoration: none;">Politecnico di Milano</a>
                     <p>MSc Computer Science & Engineering</p>
                     <hr class="divider">
-                    <a href="https://www.eng.ruh.ac.lk/" target="_blank" class="mono-text text-accent">University of Ruhuna</a>
+                    <a href="https://www.eng.ruh.ac.lk/" target="_blank" class="mono-text text-accent" style="display: block; text-decoration: none;">University of Ruhuna</a>
                     <p>BSc Eng.(Honours)in Electrical & Information Engineering</p>
                 </div>
 
+                <!-- ROW 2 -->
+                <!-- Languages Card -->
                 <div class="bento-card fade-up">
-                    <h3>Athlete & Leader</h3>
-                    <p>Former University Captain of Powerlifting. I bring the same discipline, teamwork, and drive for continuous improvement from the platform to my engineering work.</p>
+                    <h3>Languages</h3>
+                    <div class="bento-list">
+                        <div class="bento-list-item">
+                            <span style="font-weight: 600;">Sinhala</span>
+                            <span class="badge badge-public">C2 Native</span>
+                        </div>
+                        <div class="bento-list-item">
+                            <span style="font-weight: 600;">English</span>
+                            <span class="badge badge-completed">B2 Proficient</span>
+                        </div>
+                        <div class="bento-list-item">
+                            <span style="font-weight: 600;">Italian</span>
+                            <span class="badge badge-ongoing">B1 Intermediate</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bento-card span-2 fade-up">
-    <h3>Technologies & Tools</h3>
-    
-    <div class="tech-marquee-wrapper">
-        <div class="tech-marquee-track">
-            
-            <!-- First set of icons -->
-            <div class="tech-icons-group">
-                <i class="devicon-java-plain" title="Java"></i>
-                <i class="devicon-python-plain" title="Python"></i>
-                <i class="devicon-javascript-plain" title="JavaScript"></i>
-                <i class="devicon-react-original" title="React"></i>
-                <i class="devicon-nodejs-plain" title="Node.js"></i>
-                <i class="devicon-mongodb-plain" title="MongoDB"></i>
-                <i class="devicon-mysql-plain" title="MySQL"></i>
-                <i class="devicon-flutter-plain" title="Flutter"></i>
-                <i class="devicon-android-plain" title="Android"></i>
-                <i class="devicon-docker-plain" title="Docker"></i>
-                <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
-                <i class="devicon-azure-plain" title="Azure"></i>
-            </div>
-            
-            <!-- Duplicate set for seamless looping -->
-            <div class="tech-icons-group">
-                <i class="devicon-java-plain" title="Java"></i>
-                <i class="devicon-python-plain" title="Python"></i>
-                <i class="devicon-javascript-plain" title="JavaScript"></i>
-                <i class="devicon-react-original" title="React"></i>
-                <i class="devicon-nodejs-plain" title="Node.js"></i>
-                <i class="devicon-mongodb-plain" title="MongoDB"></i>
-                <i class="devicon-mysql-plain" title="MySQL"></i>
-                <i class="devicon-flutter-plain" title="Flutter"></i>
-                <i class="devicon-android-plain" title="Android"></i>
-                <i class="devicon-docker-plain" title="Docker"></i>
-                <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
-                <i class="devicon-azure-plain" title="Azure"></i>
-            </div>
-            
-        </div>
-    </div>
-</div>
+                <!-- Affiliations Card -->
+                <div class="bento-card fade-up">
+                    <h3>Affiliations</h3>
+                    <div class="bento-list">
+                        <div class="affil-item">
+                            <span class="text-accent">◆</span>
+                            <div class="affil-text">
+                                <h4>IESL</h4>
+                                <p class="mono-text">Associate Member</p>
+                            </div>
+                        </div>
+                        <div class="affil-item">
+                            <span class="text-accent">◆</span>
+                            <div class="affil-text">
+                                <h4>IEEE</h4>
+                                <p class="mono-text">Student Member</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Athlete Card -->
+                <div class="bento-card fade-up">
+                    <h3>Athlete & Leader</h3>
+                    <p style="margin-top: 1rem;">Former University Captain of Powerlifting. I bring the same discipline, teamwork, and drive for continuous improvement from the platform to my engineering work.</p>
+                </div>
+
+                <!-- ROW 3 -->
+                <!-- Tech Stack (Changed to span-3 to take up the full bottom row) -->
+                <div class="bento-card span-3 fade-up" style="overflow: hidden;">
+                    <h3>Technologies & Tools</h3>
+                    
+                    <div class="tech-marquee-wrapper">
+                        <div class="tech-marquee-track">
+                            
+                            <!-- First set of icons -->
+                            <div class="tech-icons-group">
+                                <i class="devicon-java-plain" title="Java"></i>
+                                <i class="devicon-python-plain" title="Python"></i>
+                                <i class="devicon-javascript-plain" title="JavaScript"></i>
+                                <i class="devicon-react-original" title="React"></i>
+                                <i class="devicon-nodejs-plain" title="Node.js"></i>
+                                <i class="devicon-mongodb-plain" title="MongoDB"></i>
+                                <i class="devicon-mysql-plain" title="MySQL"></i>
+                                <i class="devicon-flutter-plain" title="Flutter"></i>
+                                <i class="devicon-android-plain" title="Android"></i>
+                                <i class="devicon-docker-plain" title="Docker"></i>
+                                <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
+                                <i class="devicon-azure-plain" title="Azure"></i>
+                            </div>
+                            
+                            <!-- Duplicate set for seamless looping -->
+                            <div class="tech-icons-group">
+                                <i class="devicon-java-plain" title="Java"></i>
+                                <i class="devicon-python-plain" title="Python"></i>
+                                <i class="devicon-javascript-plain" title="JavaScript"></i>
+                                <i class="devicon-react-original" title="React"></i>
+                                <i class="devicon-nodejs-plain" title="Node.js"></i>
+                                <i class="devicon-mongodb-plain" title="MongoDB"></i>
+                                <i class="devicon-mysql-plain" title="MySQL"></i>
+                                <i class="devicon-flutter-plain" title="Flutter"></i>
+                                <i class="devicon-android-plain" title="Android"></i>
+                                <i class="devicon-docker-plain" title="Docker"></i>
+                                <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
+                                <i class="devicon-azure-plain" title="Azure"></i>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -176,7 +222,7 @@
                     <div class="project-top">
                         <i class="devicon-react-original text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
-                          <a href="assets/" class="btn-ppt" download target="_blank">
+                          <a href="assets/webpage.pdf" class="btn-ppt" download target="_blank">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                                     <line x1="8" y1="21" x2="16" y2="21"></line>
@@ -202,7 +248,7 @@
                     <div class="project-top">
                         <i class="devicon-codeigniter-plain text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
-                          <a href="assets/" class="btn-ppt" download target="_blank">
+                          <a href="assets/itsi.pdf" class="btn-ppt" download target="_blank">
                                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                                     <line x1="8" y1="21" x2="16" y2="21"></line>
