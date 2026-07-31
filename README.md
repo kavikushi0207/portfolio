@@ -51,8 +51,10 @@ To run this project locally, no complex build tools are required.
 2. Navigate into the directory:
    ```bash
    cd portfolio
-  ```
-3. Open `index.html` in your preferred web browser, or use an extension like VS Code's **Live Server** for hot-reloading.
+   ```
+
+
+3. Open ` index.html ` in your preferred web browser, or use an extension like VS Code's **Live Server** for hot-reloading.
 
 ---
 
