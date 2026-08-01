@@ -45,12 +45,16 @@ A modern, highly interactive personal portfolio built to showcase my software en
 To run this project locally, no complex build tools are required. 
 
 1. Clone the repository:
-   ```bash
+   ```
+   bash
    git clone https://github.com/kavikushi0207/portfolio.git
+
    ```
 2. Navigate into the directory:
-   ```bash
+   ```
+   bash
    cd portfolio
+   
   ```
 3. Open `index.html` in your preferred web browser, or use an extension like VS Code's **Live Server** for hot-reloading.
 

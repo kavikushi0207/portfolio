@@ -99,3 +99,21 @@ function copyEmail() {
             768: { spaceBetween: 30 }
         }
     });    
+// === MOBILE NAVIGATION TOGGLE ===
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+const allNavItems = document.querySelectorAll(".nav-links li a"); // Selects all the links inside
+
+// 1. Toggle the menu when the hamburger is clicked
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+});
+
+// 2. Automatically close the menu when a link is clicked
+allNavItems.forEach(item => {
+    item.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navLinks.classList.remove("active");
+    });
+});    
