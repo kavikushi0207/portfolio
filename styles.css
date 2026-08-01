@@ -88,13 +88,22 @@ nav {
     font-size: 1.2rem;
     color: var(--text-primary);
     text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;        /* Prevents the logo from being squished */
+    margin-right: 2rem;
 }
-.nav-links {list-style: none; display: flex; gap: 2rem; align-items: center; }
-.nav-links a {
+.nav-links {
+    list-style: 
+    none; display: flex; 
+    gap: 1.2rem; 
+    margin: 0;
+    padding: 0;}
+.nav-links li a {
     color: var(--text-secondary);
     text-decoration: none;
     font-size: 0.9rem;
     transition: color 0.3s;
+    white-space: nowrap;
 }
 .nav-links a:hover { color: var(--accent); }
 /* === HAMBURGER MENU ICON === */
@@ -117,9 +126,11 @@ nav {
 }
 
 /* === MOBILE NAVIGATION MENU === */
-@media (max-width: 900px) {
+@media (max-width: 1250px) {
     .hamburger {
-        display: flex;
+        display: flex !important; 
+        z-index: 9999 !important; 
+        position: relative;
     }
 
     .nav-links {
@@ -143,7 +154,12 @@ nav {
     .nav-links.active {
         right: 0; 
     }
-
+    .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* Creates perfect spacing between the Lang Button and Hamburger */
+    z-index: 9999; /* Keeps them clickable above everything */
+    }
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(9px) rotate(45deg);
     }
@@ -179,7 +195,37 @@ nav {
     border: 1px solid var(--accent);
     box-shadow: 0 0 20px var(--accent-glow);
 }
+/* === PREMIUM LANGUAGE TOGGLE === */
+#lang-toggle {
+    background: rgba(255, 255, 255, 0.05); /* Soft glass background */
+    border: 1px solid var(--border);       /* Matches your Bento cards */
+    color: var(--text-primary);
+    border-radius: 20px;                   /* Sleek pill shape */
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-family: var(--font-mono);         /* Tech/Coder font look */
+    cursor: pointer;
+    transition: all 0.3s ease;                 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
+    outline: none; 
+    -webkit-tap-highlight-color: transparent;
+    white-space: nowrap;
+}
 
+#lang-toggle:focus {
+    outline: none;
+}
+
+#lang-toggle:hover {
+    border-color: var(--accent);           /* Lights up teal on hover */
+    color: var(--accent);
+    background: rgba(44, 145, 145, 0.1);   /* Soft teal glow */
+    transform: translateY(-2px);           /* Tiny floating animation */
+}
 /* === HERO SECTION === */
 .hero {
     min-height: 100vh;
@@ -271,6 +317,29 @@ nav {
 
 .bento-list-item:last-child {
     border-bottom: none;
+}
+/* === EDUCATION STATUS BADGES === */
+.status-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+/* For your current MSc */
+.badge-ongoing {
+    background: rgba(44, 145, 145, 0.15); /* Soft version of your teal accent */
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+/* For your finished BSc */
+.badge-completed {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
 }
 
 .affil-item {

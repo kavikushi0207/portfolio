@@ -23,21 +23,29 @@
           <nav>
             <a href="#" class="logo">~/Kavini </a>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#extracurricular">Beyond Code</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="assets/resume.pdf" target="_blank" class="btn-outline">Resume</a></li>
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+                <li><a href="#publications" data-i18n="nav_pub">Publications</a></li>
+                <li><a href="#certifications" data-i18n="nav_certs">Certifications</a></li>
+                <li><a href="#extracurricular" data-i18n="nav_beyond">Beyond Code</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                <li><a href="assets/resume.pdf" target="_blank" class="btn-outline" data-i18n="nav_resume">Resume</a></li>
             </ul>
-            
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+             <div class="nav-actions">
+                <!-- 1. Language Toggle -->
+                <button id="lang-toggle" class="btn-outline">
+                    🇮🇹 IT
+                </button>
+
+                <!-- 2. Hamburger -->
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
+           
           </nav>
         </div>
     </header>
@@ -47,13 +55,13 @@
         <!-- Hero Section -->
         <section class="hero section-padding">
             <div class="hero-content fade-up">
-                <p class="mono-subtitle">Hi, my name is</p>
-                <h1 class="hero-title">Kavini<br><span class="text-accent">Pathagamage.</span></h1>
-                <p class="hero-desc">
+                <p class="mono-subtitle" data-i18n="hero_hi">Hi, my name is</p>
+                <h1 class="hero-title" data-i18n="hero_title">Kavini<br><span class="text-accent">Pathagamage.</span></h1>
+                <p class="hero-desc" data-i18n="hero_desc">
                     I build secure cloud applications and scalable microservices. Currently a Computer Engineering MSc Student at Politecnico di Milano, focusing on Cybersecurity and Cloud Computing.
                 </p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn-primary">View My Work</a>
+                    <a href="#projects" class="btn-primary" data-i18n="hero_btn">View My Work</a>
                     <a href="https://github.com/kavikushi0207" target="_blank" class="social-icon"><i class="devicon-github-original"></i></a>
                     <a href="https://linkedin.com/in/kavini-kushani" target="_blank" class="social-icon"><i class="devicon-linkedin-plain"></i></a>
                 </div>
@@ -62,7 +70,7 @@
 
         <!-- About Section -->
        <section id="about" class="section-padding">
-            <h2 class="section-heading fade-up"><span class="mono-num">01.</span> Who I Am</h2>
+            <h2 class="section-heading fade-up"><span class="mono-num">01.</span> <span data-i18n="about_title">Who I Am</span></h2>
             
             <div class="bento-grid">
                 
@@ -72,77 +80,105 @@
                         <img src="assets/profile.jpeg" alt="Kavini Pathagamage">
                     </div>
                     <div class="bio-content">
-                        <h3>Software Engineer & Researcher</h3>
-                        <p>“ I am passionate about exploring new trends in computer engineering, particularly in cloud applications and telecommunication solutions blended with cybersecurity. My goal is to contribute to creating a safer, more connected world. ”</p>
+                        <h3 data-i18n="about_role">Software Engineer & Researcher</h3>
+                        <p data-i18n="about_quote">“ I am passionate about exploring new trends in computer engineering, particularly in cloud applications and telecommunication solutions blended with cybersecurity. My goal is to contribute to creating a safer, more connected world. ”</p>
                     </div>
                 </div>
                 
-                <div class="bento-card fade-up">
-                    <h3>Education</h3>
-                    <!-- Added display: block so the links stack neatly above the text -->
-                    <a href="https://www.polimi.it/" target="_blank" class="mono-text text-accent" style="display: block; margin-top: 1rem; text-decoration: none;">Politecnico di Milano</a>
-                    <p>MSc Computer Science & Engineering</p>
-                    <hr class="divider">
-                    <a href="https://www.eng.ruh.ac.lk/" target="_blank" class="mono-text text-accent" style="display: block; text-decoration: none;">University of Ruhuna</a>
-                    <p>BSc Eng.(Honours)in Electrical & Information Engineering</p>
-                </div>
+               <div class="bento-card fade-up">
+    <h3 style="font-size: 1.15rem; margin-bottom: 1.5rem;" data-i18n="edu_title">Education</h3>
+    
+    <!-- MSc (Ongoing) -->
+    <div class="edu-item" style="margin-bottom: 1.5rem;">
+        <h4 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.4rem 0;">MSc Computer Science & Engineering</h4>
+        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.2rem;">
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">Politecnico di Milano</p>
+            <span class="status-badge badge-ongoing" style="margin: 0;" data-i18n="badge_ongoing">Ongoing</span>
+        </div>
+    </div>
+
+    <!-- BSc (Completed) -->
+    <div class="edu-item">
+        <h4 style="font-size: 1rem; color: var(--text-primary); margin: 0 0 0.4rem 0;">BSc Eng. (Hons) Electrical & Information</h4>
+        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.2rem;">
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin: 0;">University of Ruhuna</p>
+            <span class="status-badge badge-completed" style="margin: 0;" data-i18n="badge_completed">Completed</span>
+        </div>
+    </div>
+</div>
 
                 <!-- ROW 2 -->
                 <!-- Languages Card -->
                 <div class="bento-card fade-up">
-                    <h3>Languages</h3>
+                    <h3 data-i18n="lang_title">Languages</h3>
                     <div class="bento-list">
                         <div class="bento-list-item">
                             <span style="font-weight: 600;">Sinhala</span>
-                            <span class="badge badge-public">C2 Native</span>
+                            <span class="badge badge-public" data-i18n="lang_native">C2 Native</span>
                         </div>
                         <div class="bento-list-item">
                             <span style="font-weight: 600;">English</span>
-                            <span class="badge badge-completed">B2 Proficient</span>
+                            <span class="badge badge-completed" data-i18n="lang_prof">B2 Proficient</span>
                         </div>
                         <div class="bento-list-item">
                             <span style="font-weight: 600;">Italian</span>
-                            <span class="badge badge-ongoing">B1 Intermediate</span>
+                            <span class="badge badge-ongoing" data-i18n="lang_inter">B1 Intermediate</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Affiliations Card -->
                 <div class="bento-card fade-up">
-                    <h3>Affiliations</h3>
+                    <h3 data-i18n="affil_title">Affiliations</h3>
                     <div class="bento-list">
                         <div class="affil-item">
                             <span class="text-accent">◆</span>
                             <div class="affil-text">
                                 <h4>IESL</h4>
-                                <p class="mono-text">Associate Member</p>
+                                <p class="mono-text" data-i18n="affil_assoc">Associate Member</p>
                             </div>
                         </div>
                         <div class="affil-item">
                             <span class="text-accent">◆</span>
                             <div class="affil-text">
                                 <h4>IEEE</h4>
-                                <p class="mono-text">Student Member</p>
+                                <p class="mono-text" data-i18n="affil_student">Student Member</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Athlete Card -->
-                <div class="bento-card fade-up">
-                    <h3>Athlete & Leader</h3>
-                    <p style="margin-top: 1rem;">Former University Captain of Powerlifting. I bring the same discipline, teamwork, and drive for continuous improvement from the platform to my engineering work.</p>
+                 <div class="bento-card fade-up ">
+                    <h3 style="font-size: 1.15rem; margin-bottom: 1rem;" data-i18n="work_title">Work Status & Logistics</h3>
+                    
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1rem;">
+                        
+                        <!-- Visa/Work Status -->
+                        <li style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <span class="text-accent" style="font-size: 1.2rem;">🏛️</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--text-primary);" data-i18n="work_auth">Work Authorization</strong>
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);" data-i18n="work_auth_desc">Fully eligible to work in Italy (Permesso di Soggiorno).</span>
+                            </div>
+                        </li>
+
+                        <!-- Mobility -->
+                        <li style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                            <span class="text-accent" style="font-size: 1.2rem;">🚗</span>
+                            <div>
+                                <strong style="display: block; font-size: 0.95rem; color: var(--text-primary);" data-i18n="work_mob">Mobility</strong>
+                                <span style="font-size: 0.85rem; color: var(--text-secondary);" data-i18n="work_mob_desc">Patente B & Automunita (Personal vehicle available).</span>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
 
-                <!-- ROW 3 -->
-                <!-- Tech Stack (Changed to span-3 to take up the full bottom row) -->
+                <!-- Tech Stack -->
                 <div class="bento-card span-3 fade-up" style="overflow: hidden;">
-                    <h3>Technologies & Tools</h3>
-                    
+                    <h3 data-i18n="tech_title">Technologies & Tools</h3>
                     <div class="tech-marquee-wrapper">
                         <div class="tech-marquee-track">
-                            
-                            <!-- First set of icons -->
                             <div class="tech-icons-group">
                                 <i class="devicon-java-plain" title="Java"></i>
                                 <i class="devicon-python-plain" title="Python"></i>
@@ -157,8 +193,6 @@
                                 <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
                                 <i class="devicon-azure-plain" title="Azure"></i>
                             </div>
-                            
-                            <!-- Duplicate set for seamless looping -->
                             <div class="tech-icons-group">
                                 <i class="devicon-java-plain" title="Java"></i>
                                 <i class="devicon-python-plain" title="Python"></i>
@@ -173,7 +207,6 @@
                                 <i class="devicon-kubernetes-plain" title="Kubernetes"></i>
                                 <i class="devicon-azure-plain" title="Azure"></i>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
@@ -182,36 +215,36 @@
 
         <!-- Experience Timeline -->
         <section id="experience" class="section-padding">
-            <h2 class="section-heading fade-up"><span class="mono-num">02.</span> Where I've Worked</h2>
+            <h2 class="section-heading fade-up"><span class="mono-num">02.</span> <span data-i18n="exp_title">Where I've Worked</span></h2>
             
             <div class="timeline">
                 <div class="timeline-item fade-up">
                     <div class="timeline-date mono-text">Nov 2023 — Jan 2025</div>
                     <div class="timeline-content bento-card">
-                        <h3>Software Engineer Intern <span class="text-accent">@ Chimitex S.p.A, Italy</span></h3>
-                        <p>Built an Android app for submitting vehicle defect tickets and tracking updates, alongside a Web Application designed for ticket management and scheduling maintenance appointments.</p>
+                        <h3><span data-i18n="exp_intern">Software Engineer Intern</span> <span class="text-accent">@ Chimitex S.p.A, Italy</span></h3>
+                        <p data-i18n="exp_desc1">Built an Android app for submitting vehicle defect tickets and tracking updates, alongside a Web Application designed for ticket management and scheduling maintenance appointments.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item fade-up">
                     <div class="timeline-date mono-text">Dec 2022 — Oct 2023</div>
                     <div class="timeline-content bento-card">
-                        <h3>Research Assistant <span class="text-accent">@ NetsLab, Ireland</span></h3>
-                        <p>Developed a peer-to-peer federated learning platform for Industrial IoT focusing on privacy preservation. Implemented differential privacy and encryption protocols.</p>
+                        <h3><span data-i18n="exp_ra">Research Assistant</span> <span class="text-accent">@ NetsLab, Ireland</span></h3>
+                        <p data-i18n="exp_desc2">Developed a peer-to-peer federated learning platform for Industrial IoT focusing on privacy preservation. Implemented differential privacy and encryption protocols.</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-up">
                     <div class="timeline-date mono-text">Jan 2023 - Jan 2024</div>
                     <div class="timeline-content bento-card">
-                        <h3>Student Instructor <span class="text-accent">@ Faculty of Engineering, University of Ruhuna, Sri Lanka</span></h3>
-                        <p>Contributed to teaching assistance through theoretical and practical examples for undergraduates</p>
+                        <h3><span data-i18n="exp_si">Student Instructor</span> <span class="text-accent">@ Faculty of Engineering, University of Ruhuna, Sri Lanka</span></h3>
+                        <p data-i18n="exp_desc3">Contributed to teaching assistance through theoretical and practical examples for undergraduates</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-up">
                     <div class="timeline-date mono-text">Mar 2022 - June 2022</div>
                     <div class="timeline-content bento-card">
-                        <h3>Software Engineer Intern <span class="text-accent">@ AdroitLogic Lanka Pvt Ltd, Sri Lanka</span></h3>
-                        <p>Developed a internal ticketing system for managing and tracking support requests.</p>
+                        <h3><span data-i18n="exp_intern">Software Engineer Intern</span> <span class="text-accent">@ AdroitLogic Lanka Pvt Ltd, Sri Lanka</span></h3>
+                        <p data-i18n="exp_desc4">Developed a internal ticketing system for managing and tracking support requests.</p>
                     </div>
                 </div>
             </div>
@@ -219,7 +252,7 @@
 
         <!-- Projects Section -->
         <section id="projects" class="section-padding">
-            <h2 class="section-heading fade-up"><span class="mono-num">03.</span> Featured Projects</h2>
+            <h2 class="section-heading fade-up"><span class="mono-num">03.</span> <span data-i18n="proj_title">Featured Projects</span></h2>
             
             <div class="project-grid">
               <div class="project-card bento-card fade-up">
@@ -227,74 +260,58 @@
                         <i class="devicon-react-original text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
                           <a href="assets/webpage.pdf" class="btn-ppt" download target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg>
-                                Proposal ↓
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                <span data-i18n="proj_proposal">Proposal ↓</span>
                             </a>
-                            <a href="https://github.com/kavikushi0207/italiKuppiya" target="_blank">Code ↗</a>
+                            <a href="https://github.com/kavikushi0207/italiKuppiya" target="_blank" data-i18n="proj_code">Code ↗</a>
                         </div>
                     </div>
-                    
                     <h3 class="project-title">Itali Kuppiya Official Website</h3>
-                    <p class="project-desc">
-                      Creating the official website for Itali Kuppiya, a platform for teaching the basic Italian language to Sri Lankan people in an explanatiive way.
-                    </p>                   
+                    <p class="project-desc" data-i18n="proj_desc1">Creating the official website for Itali Kuppiya, a platform for teaching the basic Italian language to Sri Lankan people in an explanatiive way.</p>                   
                      <div class="project-tech mono-text">Firebase · Node.js · Javascript · React</div>
                      <div class="project-badges">
-                        <span class="badge badge-public">Public</span>
-                        <span class="badge badge-ongoing">Ongoing</span>
+                        <span class="badge badge-public" data-i18n="badge_public">Public</span>
+                        <span class="badge badge-ongoing" data-i18n="badge_ongoing">Ongoing</span>
                     </div>
                 </div>
+
                 <div class="project-card bento-card fade-up">
                     <div class="project-top">
                         <i class="devicon-codeigniter-plain text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
                           <a href="assets/itsi.pdf" class="btn-ppt" download target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg>
-                                Proposal ↓
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                <span data-i18n="proj_proposal">Proposal ↓</span>
                             </a>
-                            <a href="https://github.com/kavikushi0207/ITSI" target="_blank">Code ↗</a>
+                            <a href="https://github.com/kavikushi0207/ITSI" target="_blank" data-i18n="proj_code">Code ↗</a>
                         </div>
                     </div>
-                    
                     <h3 class="project-title">ITSI</h3>
-                    <p class="project-desc">
-This is for playing italian in sinhala language to practice italian language for Sri Lankan people                    </p>                   
+                    <p class="project-desc" data-i18n="proj_desc2">This is for playing italian in sinhala language to practice italian language for Sri Lankan people</p>                   
                      <div class="project-tech mono-text">ios · Android · Flutter · Dart</div>
                      <div class="project-badges">
-                        <span class="badge badge-public">Public</span>
-                        <span class="badge badge-ongoing">Ongoing</span>
+                        <span class="badge badge-public" data-i18n="badge_public">Public</span>
+                        <span class="badge badge-ongoing" data-i18n="badge_ongoing">Ongoing</span>
                     </div>
                 </div>
+
                 <div class="project-card bento-card fade-up">
                     <div class="project-top">
                         <i class="devicon-azure-plain text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
-
                           <a href="assets/faas.pdf" class="btn-ppt" download target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg>
-                                Slides ↓
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                <span data-i18n="proj_slides">Slides ↓</span>
                             </a>
-                            <a href="https://github.com/kavikushi0207/FaaSTestProject" target="_blank">Code ↗</a>
+                            <a href="https://github.com/kavikushi0207/FaaSTestProject" target="_blank" data-i18n="proj_code">Code ↗</a>
                         </div>
                     </div>
                     <h3 class="project-title">FaaS Performance Analysis</h3>
-                    <p class="project-desc">Executed a comprehensive Function-as-a-Service (FaaS) performance analysis project. Involved deep cloud benchmarking and managing containerized microservices.</p>
+                    <p class="project-desc" data-i18n="proj_desc3">Executed a comprehensive Function-as-a-Service (FaaS) performance analysis project. Involved deep cloud benchmarking and managing containerized microservices.</p>
                     <div class="project-tech mono-text">Cloud Benchmarking · FaaS · Microservices</div>
                     <div class="project-badges">
-                        <span class="badge badge-public">Public</span>
-                        <span class="badge badge-completed">Completed</span>
+                        <span class="badge badge-public" data-i18n="badge_public">Public</span>
+                        <span class="badge badge-completed" data-i18n="badge_completed">Completed</span>
                     </div>
                 </div>
 
@@ -303,426 +320,351 @@ This is for playing italian in sinhala language to practice italian language for
                         <i class="devicon-flutter-plain text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
                           <a href="assets/travelMate.pdf" class="btn-ppt" download target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg>
-                                Slides ↓
-                            <a href="https://github.com/KasraAlizadeh/MobileApp" target="_blank">Code ↗</a>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                <span data-i18n="proj_slides">Slides ↓</span>
+                            </a>
+                            <a href="https://github.com/KasraAlizadeh/MobileApp" target="_blank" data-i18n="proj_code">Code ↗</a>
                         </div>
                     </div>
                     <h3 class="project-title">Travel Mate</h3>
-                    <p class="project-desc">Engineered a mobile application using Flutter. Designed core code architecture, managed complex local storage integrations, and configured cross-platform deployment files.</p>
+                    <p class="project-desc" data-i18n="proj_desc4">Engineered a mobile application using Flutter. Designed core code architecture, managed complex local storage integrations, and configured cross-platform deployment files.</p>
                     <div class="project-tech mono-text">Flutter · Dart · Mobile Architecture</div>
                     <div class="project-badges">
-                        <span class="badge badge-public">Public</span>
-                        <span class="badge badge-completed">Completed</span>
+                        <span class="badge badge-public" data-i18n="badge_public">Public</span>
+                        <span class="badge badge-completed" data-i18n="badge_completed">Completed</span>
                     </div>
                 </div>
+
                 <div class="project-card bento-card fade-up">
                     <div class="project-top">
                         <i class="devicon-elixir-plain text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
                           <a href="assets/chimitick.pdf" class="btn-ppt" download target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg>
-                                Manual ↓
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                <span data-i18n="proj_manual">Manual ↓</span>
                             </a>
-                            <a href="https://github.com/kavikushi0207/ChimiTick" target="_blank">Code ↗</a>
+                            <a href="https://github.com/kavikushi0207/ChimiTick" target="_blank" data-i18n="proj_code">Code ↗</a>
                         </div>
                     </div>
-                    
                     <h3 class="project-title">ChimiTick</h3>
-                    <p class="project-desc">
-                      Research and Development of a system consists of two apps( android app and web application)to submit and track vehicle defects and schedule appointments for maintenance.
-                    </p>                   
+                    <p class="project-desc" data-i18n="proj_desc5">Research and Development of a system consists of two apps( android app and web application)to submit and track vehicle defects and schedule appointments for maintenance.</p>                   
                     <div class="project-tech mono-text">Java · Android · Javascript · React</div>
                     <div class="project-badges">
-                        <span class="badge badge-private">Private</span>
-                        <span class="badge badge-completed">Completed</span>
+                        <span class="badge badge-private" data-i18n="badge_private">Private</span>
+                        <span class="badge badge-completed" data-i18n="badge_completed">Completed</span>
                     </div>
                 </div>
+
                 <div class="project-card bento-card fade-up">
                     <div class="project-top">
                         <i class="devicon-networkx-original text-accent" style="font-size: 2rem;"></i>
                         <div class="project-links">
                           <a href="assets/p2p_project.pdf" class="btn-ppt" download target="_blank">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                    <line x1="8" y1="21" x2="16" y2="21"></line>
-                                    <line x1="12" y1="17" x2="12" y2="21"></line>
-                                </svg>
-                                Slides ↓
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                <span data-i18n="proj_slides">Slides ↓</span>
                             </a>
-                            <a href="https://github.com/samitha093/FYP_project" target="_blank">Code ↗</a>
+                            <a href="https://github.com/samitha093/FYP_project" target="_blank" data-i18n="proj_code">Code ↗</a>
                         </div>
                     </div>
                     <h3 class="project-title">P2P Federated Learning System</h3>
-                    <p class="project-desc">Collaborative Federated Learning Platform for Privacy-preserved Decentralized Machine Learning in Industrial Internet of Things (IIoT).</p>
-
-                    
+                    <p class="project-desc" data-i18n="proj_desc6">Collaborative Federated Learning Platform for Privacy-preserved Decentralized Machine Learning in Industrial Internet of Things (IIoT).</p>
                     <div class="project-tech mono-text">Java · Python · Cryptography</div>
                     <div class="project-badges">
-                        <span class="badge badge-public">Public</span>
-                        <span class="badge badge-completed">Completed</span>
+                        <span class="badge badge-public" data-i18n="badge_public">Public</span>
+                        <span class="badge badge-completed" data-i18n="badge_completed">Completed</span>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Publications Section -->
         <section id="publications" class="section-padding">
-            <h2 class="section-heading fade-up"><span class="mono-num">04.</span> Publications</h2>
-            
+            <h2 class="section-heading fade-up"><span class="mono-num">04.</span> <span data-i18n="pub_title">Publications</span></h2>
+            <div class="bento-card fade-up" style="margin-bottom: 2rem; padding: 1.5rem 2rem;">
+        <h3 style="font-size: 1.15rem; margin-bottom: 1rem;" data-i18n="res_title">Research Interests</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+            <span class="badge badge-public" data-i18n="res_cyber">🛡️ Cybersecurity</span>
+            <span class="badge badge-ongoing" data-i18n="res_cloud">☁️ Cloud Computing</span>
+            <span class="badge badge-private" data-i18n="res_fl">🤖 Federated Learning</span>
+            <span class="badge badge-completed" data-i18n="res_iiot">🏭 Industrial IoT (IIoT)</span>
+            <span class="badge badge-public" data-i18n="res_privacy">🔐 Privacy Preservation</span>
+            <span class="badge badge-private" data-i18n="res_cloud_sec">☁️🔒 Cloud Security</span>
+            <span class="badge badge-completed" data-i18n="res_faas">⚡ FaaS Performance</span>
+            <span class="badge badge-ongoing" data-i18n="res_encryp">🔑 Encryption Mechanisms</span>
+        </div>
+        </div>
             <div class="pub-grid">
-                
-                
                 <a href="https://doi.org/10.1109/LATINCOM59467.2023.10361886" target="_blank" class="pub-card fade-up">
                     <div class="pub-content">
                         <div class="pub-meta mono-text text-accent">IEEE LATINCOM 2023</div>
                         <h3 class="pub-title">Collaborative Federated Learning Platform for Privacy-preserved Decentralized Machine Learning in Industrial IoT</h3>
-                        <p class="pub-desc">A decentralized federated learning platform focusing on secure peer-to-peer data transfer and privacy preservation in IIoT environments.</p>
+                        <p class="pub-desc" data-i18n="pub_desc1">A decentralized federated learning platform focusing on secure peer-to-peer data transfer and privacy preservation in IIoT environments.</p>
                     </div>
                     <div class="pub-footer">
                         <span class="mono-text">DOI: 10.1109/LATINCOM59467.2023.10361886</span>
-                        <span class="view-link">Read Paper ↗</span>
+                        <span class="view-link" data-i18n="pub_read">Read Paper ↗</span>
                     </div>
                 </a>
 
-                
                 <a href="https://link.springer.com/chapter/10.1007/978-3-031-89813-6_13" target="_blank" class="pub-card fade-up">
                     <div class="pub-content">
                         <div class="pub-meta mono-text text-accent">APAN58 Conference 2024</div>
                         <h3 class="pub-title">Peer-to-Peer Collaborative Learning Platform for Privacy-Preserved Federated Learning in Industrial Internet</h3>
-                        <p class="pub-desc">Research accepted at APAN58 highlighting advanced encryption protocols and differential privacy techniques for collaborative learning.</p>
+                        <p class="pub-desc" data-i18n="pub_desc2">Research accepted at APAN58 highlighting advanced encryption protocols and differential privacy techniques for collaborative learning.</p>
                     </div>
                     <div class="pub-footer">
                         <span class="mono-text">DOI: 10.1007/978-3-031-89813-6-13</span>
-                        <span class="view-link">Read Paper ↗</span>
+                        <span class="view-link" data-i18n="pub_read">Read Paper ↗</span>
                     </div>
                 </a>
-
             </div>
         </section>
- <!-- Certifications & Awards Section -->
+
+        <!-- Certifications & Awards Section -->
         <section id="certifications" class="section-padding">
-            <h2 class="section-heading fade-up"><span class="mono-num">06.</span> Certifications & Awards</h2>
+            <h2 class="section-heading fade-up"><span class="mono-num">06.</span> <span data-i18n="cert_title">Certifications & Awards</span></h2>
             
             <div class="bento-card fade-up" style="overflow: hidden; padding: 3rem 0;">
-                
                 <div class="cert-marquee-wrapper">
                     <div class="cert-marquee-track">
-                        
-                        <!-- First set of visual certificates -->
+                        <!-- First set -->
                         <div class="cert-group">
                             <a href="assets/certs/ECSL26.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/ECSL26.png" alt="ECSL Membership certificate">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/ECSL26.png" alt="ECSL Membership certificate"></div>
                                 <div class="cert-text">
-                                    <h4>ECSL engineer membership</h4>
-                                    <p>Affliations</p>
+                                    <h4 data-i18n="cert_ecsl">ECSL engineer membership</h4>
+                                    <p data-i18n="cert_affil">Affiliations</p>
                                 </div>
                             </a>
-
                             <a href="assets/certs/gc2.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/gc2.png" alt="Strategies for Cloud Risk Management">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/gc2.png" alt="Strategies for Cloud Risk Management"></div>
                                 <div class="cert-text">
-                                    <h4>Strategies for Cloud Risk Management</h4>
+                                    <h4 data-i18n="cert_gcp2">Strategies for Cloud Risk Management</h4>
                                     <p>Google Cloud</p>
                                 </div>
                             </a>
-
                             <a href="assets/certs/L2ITA.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/L2ITA.png" alt="L2 ITALIAN EXAM CERTIFICATE BY CISIA">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/L2ITA.png" alt="L2 ITALIAN EXAM CERTIFICATE BY CISIA"></div>
                                 <div class="cert-text">
-                                    <h4>L2 Italian certificate by CISIA</h4>
-                                    <p>Languages</p>
+                                    <h4 data-i18n="cert_l2">L2 Italian certificate by CISIA</h4>
+                                    <p data-i18n="cert_lang">Languages</p>
                                 </div>
                             </a>
-
                             <a href="assets/certs/agile1.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/agile1.png" alt="Agile Project Management">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/agile1.png" alt="Agile Project Management"></div>
                                 <div class="cert-text">
-                                    <h4>Agile Project Management</h4>
+                                    <h4 data-i18n="cert_agile1">Agile Project Management</h4>
                                     <p>Scrum Alliance</p>
                                 </div>
                             </a>
                             <a href="assets/certs/gc1.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/gc1.png" alt="Introduction to security principles in cloud computing">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/gc1.png" alt="Introduction to security principles in cloud computing"></div>
                                 <div class="cert-text">
-                                    <h4>Introduction to security principles in cloud computing</h4>
+                                    <h4 data-i18n="cert_gcp1">Introduction to security principles in cloud computing</h4>
                                     <p>Google Cloud</p>
                                 </div>
                             </a>
                             <a href="assets/certs/agile.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/agile.png" alt="Agile Project Management - Agile as a Culture">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/agile.png" alt="Agile Project Management - Agile as a Culture"></div>
                                 <div class="cert-text">
-                                    <h4>Agile Project Management - Agile as a Culture</h4>
+                                    <h4 data-i18n="cert_agile2">Agile Project Management - Agile as a Culture</h4>
                                     <p>Scrum Alliance</p>
                                 </div>
                             </a>
                              <a href="assets/certs/A2ITA.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/A2ITA.png" alt="A2 ITALIAN EXAM CERTIFICATE BY CPIA">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/A2ITA.png" alt="A2 ITALIAN EXAM CERTIFICATE BY CPIA"></div>
                                 <div class="cert-text">
-                                    <h4>A2 Italian certificate by CPIA</h4>
-                                    <p>Languages</p>
+                                    <h4 data-i18n="cert_a2">A2 Italian certificate by CPIA</h4>
+                                    <p data-i18n="cert_lang">Languages</p>
                                 </div>
                             </a>
                             <a href="assets/certs/pm.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/PM.png" alt="Project Management Principles and Practices">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/PM.png" alt="Project Management Principles and Practices"></div>
                                 <div class="cert-text">
-                                    <h4>Project Management Principles and Practices</h4>
+                                    <h4 data-i18n="cert_pm">Project Management Principles and Practices</h4>
                                     <p>Politecnico di Milano</p>
                                 </div>
                             </a>
                         </div>
                         
-                        <!-- Duplicate set for seamless infinite loop -->
-                      <div class="cert-group">
+                        <!-- Duplicate set (Must keep tags here too!) -->
+                        <div class="cert-group">
                             <a href="assets/certs/ECSL26.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/ECSL26.png" alt="ECSL Membership certificate">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/ECSL26.png" alt="ECSL Membership certificate"></div>
                                 <div class="cert-text">
-                                    <h4>ECSL engineer membership</h4>
-                                    <p>Affliations</p>
+                                    <h4 data-i18n="cert_ecsl">ECSL engineer membership</h4>
+                                    <p data-i18n="cert_affil">Affiliations</p>
                                 </div>
                             </a>
-
                             <a href="assets/certs/gc2.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/gc2.png" alt="Strategies for Cloud Risk Management">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/gc2.png" alt="Strategies for Cloud Risk Management"></div>
                                 <div class="cert-text">
-                                    <h4>Strategies for Cloud Risk Management</h4>
+                                    <h4 data-i18n="cert_gcp2">Strategies for Cloud Risk Management</h4>
                                     <p>Google Cloud</p>
                                 </div>
                             </a>
-
                             <a href="assets/certs/L2ITA.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/L2ITA.png" alt="L2 ITALIAN EXAM CERTIFICATE BY CISIA">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/L2ITA.png" alt="L2 ITALIAN EXAM CERTIFICATE BY CISIA"></div>
                                 <div class="cert-text">
-                                    <h4>L2 Italian certificate by CISIA</h4>
-                                    <p>Languages</p>
+                                    <h4 data-i18n="cert_l2">L2 Italian certificate by CISIA</h4>
+                                    <p data-i18n="cert_lang">Languages</p>
                                 </div>
                             </a>
-
                             <a href="assets/certs/agile1.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/agile1.png" alt="Agile Project Management">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/agile1.png" alt="Agile Project Management"></div>
                                 <div class="cert-text">
-                                    <h4>Agile Project Management</h4>
+                                    <h4 data-i18n="cert_agile1">Agile Project Management</h4>
                                     <p>Scrum Alliance</p>
                                 </div>
                             </a>
                             <a href="assets/certs/gc1.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/gc1.png" alt="Introduction to security principles in cloud computing">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/gc1.png" alt="Introduction to security principles in cloud computing"></div>
                                 <div class="cert-text">
-                                    <h4>Introduction to security principles in cloud computing</h4>
+                                    <h4 data-i18n="cert_gcp1">Introduction to security principles in cloud computing</h4>
                                     <p>Google Cloud</p>
                                 </div>
                             </a>
                             <a href="assets/certs/agile.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/agile.png" alt="Agile Project Management - Agile as a Culture">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/agile.png" alt="Agile Project Management - Agile as a Culture"></div>
                                 <div class="cert-text">
-                                    <h4>Agile Project Management - Agile as a Culture</h4>
+                                    <h4 data-i18n="cert_agile2">Agile Project Management - Agile as a Culture</h4>
                                     <p>Scrum Alliance</p>
                                 </div>
                             </a>
                              <a href="assets/certs/A2ITA.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/A2ITA.png" alt="A2 ITALIAN EXAM CERTIFICATE BY CPIA">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/A2ITA.png" alt="A2 ITALIAN EXAM CERTIFICATE BY CPIA"></div>
                                 <div class="cert-text">
-                                    <h4>A2 Italian certificate by CPIA</h4>
-                                    <p>Languages</p>
+                                    <h4 data-i18n="cert_a2">A2 Italian certificate by CPIA</h4>
+                                    <p data-i18n="cert_lang">Languages</p>
                                 </div>
                             </a>
                             <a href="assets/certs/pm.png" target="_blank" class="cert-card-mini">
-                                <div class="cert-img-wrapper">
-                                    <img src="assets/certs/PM.png" alt="Project Management Principles and Practices">
-                                </div>
+                                <div class="cert-img-wrapper"><img src="assets/certs/PM.png" alt="Project Management Principles and Practices"></div>
                                 <div class="cert-text">
-                                    <h4>Project Management Principles and Practices</h4>
-                                    <p>Politecno di Milano</p>
+                                    <h4 data-i18n="cert_pm">Project Management Principles and Practices</h4>
+                                    <p>Politecnico di Milano</p>
                                 </div>
                             </a>
                         </div>
-                        
                     </div>
                 </div>
-
             </div>
         </section>
+
         <!-- Leadership & Volunteering Section -->
         <section id="extracurricular" class="section-padding">
-            <h2 class="section-heading fade-up"><span class="mono-num">05.</span> Beyond The Code</h2>
+            <h2 class="section-heading fade-up"><span class="mono-num">05.</span> <span data-i18n="extra_title">Beyond The Code</span></h2>
             
-            <!-- Swiper Carousel Container -->
             <div class="swiper extra-swiper fade-up">
               <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/ik.png" alt="page owner">
-                            </div>
+                            <div class="extra-img"><img src="assets/images/ik.png" alt="page owner"></div>
                             <div class="extra-content">
-                              
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-public">Social</span></div>
-                                <h3> Owner of "Itali Kuppiya" Educational page</h3>
-                                <p>Running a successful educational fb page for the Sri Lankan community to learn Italian easy and simple way from thier own mother tongue.</p>
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-public" data-i18n="badge_social">Social</span></div>
+                                <h3 data-i18n="extra_ik_t">Owner of "Itali Kuppiya" Educational page</h3>
+                                <p data-i18n="extra_ik_d">Running a successful educational fb page for the Sri Lankan community to learn Italian easy and simple way from thier own mother tongue.</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/haxtreme.png" alt="HaXtreme Founder">
-                            </div>
+                            <div class="extra-img"><img src="assets/images/haxtreme.png" alt="HaXtreme Founder"></div>
                             <div class="extra-content">
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-completed">Organizer</span></div>
-                                <h3>Founder & President of HaXtreme 1.0v</h3>
-                                <p>Founded and served as the Chairperson of IEEE HaXtreme. Managed organizing committees, structured the technical events, and successfully led the initiative from the ground up.</p>
-                            </div>
-                        </div>
-                    </div>
-                  
-                    <div class="swiper-slide">
-                        <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/athlete.png" alt="University Athlete">
-                            </div>
-                            <div class="extra-content">
-                                <!-- Badge moved here! -->
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-ongoing">Sports</span></div>
-                                <h3>University Athlete</h3>
-                                <p>Dedicated university athlete balancing rigorous engineering academics with high-level sports. Earned University Colors and brought a strong work ethic from the platform into my professional life.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                    <div class="swiper-slide">
-                        <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/weightlifitng.JPG" alt="Weightlifting Victory">
-                            </div>
-                            <div class="extra-content">
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-completed">Victory</span></div>
-                                <h3>Weightlifting Champion</h3>
-                                <p>Secured the championship title as the Winner of Weightlifting (2022) at the faculty level, proving the value of consistency, strict training, and determination.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                   
-                    <div class="swiper-slide">
-                        <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/plwl.JPG" alt="Powerlifting Captain">
-                            </div>
-                            <div class="extra-content">
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-public">Leadership</span></div>
-                                <h3>Powerlifting Captain</h3>
-                                <p>Served as the University Captain of Powerlifting (2023). Beyond leading the team, I secured personal victories including 1st Runner-Up (2022) and Winner of Powerlifting (2019).</p>
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-completed" data-i18n="badge_org">Organizer</span></div>
+                                <h3 data-i18n="extra_hax_t">Founder & President of HaXtreme 1.0v</h3>
+                                <p data-i18n="extra_hax_d">Founded and served as the Chairperson of IEEE HaXtreme. Managed organizing committees, structured the technical events, and successfully led the initiative from the ground up.</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/awareness.png" alt="Awareness Programs">
-                            </div>
+                            <div class="extra-img"><img src="assets/images/athlete.png" alt="University Athlete"></div>
                             <div class="extra-content">
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-private">Mentorship</span></div>
-                                <h3>Undergraduate Mentorship</h3>
-                                <p>Organized awareness programs and served as a Student Instructor, actively mentoring fresh undergraduates to ease their transition into university life and engineering principles.</p>
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-ongoing" data-i18n="badge_sports">Sports</span></div>
+                                <h3 data-i18n="extra_ath_t">University Athlete</h3>
+                                <p data-i18n="extra_ath_d">Dedicated university athlete balancing rigorous engineering academics with high-level sports. Earned University Colors and brought a strong work ethic from the platform into my professional life.</p>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="swiper-slide">
                         <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/internationalmeets.png" alt="International Meetups">
-                            </div>
+                            <div class="extra-img"><img src="assets/images/weightlifitng.JPG" alt="Weightlifting Victory"></div>
                             <div class="extra-content">
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-private">International Meets</span></div>
-                                <h3>International Meetups</h3>
-                                <p>Participated in and organized international meetups to connect with peers and professionals from around the world in Polimi.</p>
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-completed" data-i18n="badge_vic">Victory</span></div>
+                                <h3 data-i18n="extra_weight_t">Weightlifting Champion</h3>
+                                <p data-i18n="extra_weight_d">Secured the championship title as the Winner of Weightlifting (2022) at the faculty level, proving the value of consistency, strict training, and determination.</p>
                             </div>
                         </div>
                     </div>
-
                     <div class="swiper-slide">
                         <div class="extra-card bento-card">
-                            <div class="extra-img">
-                                <img src="assets/images/socialevents.JPG" alt="Social Events">
-                            </div>
+                            <div class="extra-img"><img src="assets/images/plwl.JPG" alt="Powerlifting Captain"></div>
                             <div class="extra-content">
-                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-public">Social</span></div>
-                                <h3>Social Entertainer</h3>
-                                <p>Singing and performing at various events and gatherings.</p>
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-public" data-i18n="badge_lead">Leadership</span></div>
+                                <h3 data-i18n="extra_power_t">Powerlifting Captain</h3>
+                                <p data-i18n="extra_power_d">Served as the University Captain of Powerlifting (2023). Beyond leading the team, I secured personal victories including 1st Runner-Up (2022) and Winner of Powerlifting (2019).</p>
                             </div>
                         </div>
                     </div>
-
+                    <div class="swiper-slide">
+                        <div class="extra-card bento-card">
+                            <div class="extra-img"><img src="assets/images/awareness.png" alt="Awareness Programs"></div>
+                            <div class="extra-content">
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-private" data-i18n="badge_mentor">Mentorship</span></div>
+                                <h3 data-i18n="extra_mentor_t">Undergraduate Mentorship</h3>
+                                <p data-i18n="extra_mentor_d">Organized awareness programs and served as a Student Instructor, actively mentoring fresh undergraduates to ease their transition into university life and engineering principles.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="extra-card bento-card">
+                            <div class="extra-img"><img src="assets/images/internationalmeets.png" alt="International Meetups"></div>
+                            <div class="extra-content">
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-ongoing" data-i18n="badge_int">International Meets</span></div>
+                                <h3 data-i18n="extra_int_t">International Meetups</h3>
+                                <p data-i18n="extra_int_d">Participated in and organized international meetups to connect with peers and professionals from around the world in Polimi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="extra-card bento-card">
+                            <div class="extra-img"><img src="assets/images/socialevents.JPG" alt="Social Events"></div>
+                            <div class="extra-content">
+                                <div style="margin-bottom: 0.8rem;"><span class="badge badge-public" data-i18n="badge_social">Social</span></div>
+                                <h3 data-i18n="extra_soc_t">Social Entertainer</h3>
+                                <p data-i18n="extra_soc_d">Singing and performing at various events and gatherings.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              
                 <div class="swiper-pagination"></div>
             </div>
         </section>
+
         <!-- Contact Section -->
         <section id="contact" class="section-padding">
-            <h2 class="section-heading fade-up"><span class="mono-num">05.</span> Get In Touch</h2>
+            <h2 class="section-heading fade-up"><span class="mono-num">05.</span> <span data-i18n="contact_title">Get In Touch</span></h2>
             
             <div class="contact-bento bento-card fade-up">
                 <div class="contact-text">
-                    <h3 class="contact-title">Let's build something <span class="text-accent">together.</span></h3>
-                    <p>I am currently open to new opportunities, collaborations, and discussions in Cloud Computing, Cybersecurity, and Software Engineering. Whether you have a question or just want to connect, my inbox is always open!</p>
+                    <h3 class="contact-title" data-i18n="contact_heading">Let's build something <span class="text-accent">together.</span></h3>
+                    <p data-i18n="contact_desc">I am currently open to new opportunities, collaborations, and discussions in Cloud Computing, Cybersecurity, and Software Engineering. Whether you have a question or just want to connect, my inbox is always open!</p>
                     
                     <div class="email-container">
-                        <!-- Direct Mailto Button -->
-                        <a href="mailto:kavikushi0207@gmail.com" class="btn-primary contact-btn">
-                            Say Hello 
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kavikushi0207@gmail.com" target="_blank" class="btn-primary contact-btn">
+                            <span data-i18n="contact_btn">Write Me</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="5" y1="12" x2="19" y2="12"></line>
                                 <polyline points="12 5 19 12 12 19"></polyline>
                             </svg>
                         </a>
-                        
-                        <!-- Interactive Copy to Clipboard Button -->
                         <button class="copy-email-btn" id="copyBtn" onclick="copyEmail()" title="Copy Email Address">
                             <svg id="copyIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
                             </svg>
-                            <span id="copyText" class="mono-text">Copy</span>
+                            <span id="copyText" class="mono-text" data-i18n="contact_copy">Copy</span>
                         </button>
                     </div>
                 </div>
@@ -737,16 +679,12 @@ This is for playing italian in sinhala language to practice italian language for
                         <i class="devicon-github-original"></i>
                         <span>GitHub</span>
                     </a>
-                    <!-- ResearchGate -->
-                    <!-- ResearchGate -->
                     <a href="https://www.researchgate.net/profile/Kavini-Kushani" target="_blank" class="social-box">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path d="M10.024 16.924c-1.393-.207-2.091-1.01-2.486-1.503l.006-2.584s.885.086 2.073.086c2.404 0 2.529-1.368 2.529-1.892 0-1.802-.857-2.146-2.316-2.146H4.25v8.718h2.906v-3.799h1.727l1.782 3.799H13.62l-3.596-4.679zM19.141 6.577c-3.13 0-5.756 2.455-5.756 5.485 0 2.766 2.378 5.215 5.289 5.215 1.708 0 2.922-.72 3.73-1.464V12.1h-4.249v2.247h1.611c-.551.493-1.258.837-2.112.837-1.802 0-2.885-1.512-2.885-2.934 0-1.745 1.25-3.21 3.12-3.21 1.054 0 1.954.49 2.527 1.053l1.83-1.815c-1.07-1.047-2.518-1.701-4.105-1.701z"/>
                         </svg>
                         <span>ResearchGate</span>
                     </a>
-
-                    <!-- Medium -->
                     <a href="https://medium.com/@kavikushi0207" target="_blank" class="social-box">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                             <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/>
@@ -759,16 +697,13 @@ This is for playing italian in sinhala language to practice italian language for
     </main>
 
     <footer class="footer">
-        <p class="mono-text">All rights reserved © 2026 Kavini Madhusanka Kushani Pathagamage</p>
+        <p class="mono-text" data-i18n="footer_text">All rights reserved © 2026 Kavini Madhusanka Kushani Pathagamage</p>
     </footer>
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>    
-    <!-- GSAP for smooth scroll animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
